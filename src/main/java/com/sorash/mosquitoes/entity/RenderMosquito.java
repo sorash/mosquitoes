@@ -31,9 +31,9 @@ public class RenderMosquito extends RenderLiving<EntityMosquito>
 	 */
 	protected void preRenderCallback(EntityMosquito entitylivingbaseIn, float partialTickTime)
 	{
-		GlStateManager.scale(0.45F, 0.45F, 0.45F);	// scale model down
+		GlStateManager.scale(0.15F, 0.15F, 0.15F);	// scale model down
 													// 0.15F, 0.15F, 0.15F seems good
-		GlStateManager.translate(0.0F, -2.0F, 0.0F);	// needed or it falls through the floor??
+		GlStateManager.translate(0.0F, -1.0F, 0.0F);	// needed or it falls through the floor??
 	}
 
 	protected void rotateCorpse(EntityMosquito mosquito, float p_77043_2_, float p_77043_3_, float partialTicks)
