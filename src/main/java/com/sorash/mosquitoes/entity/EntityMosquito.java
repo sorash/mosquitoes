@@ -8,6 +8,6 @@ public class EntityMosquito extends EntityCreature
 	public EntityMosquito(World worldIn) 
 	{
 		super(worldIn);
-		this.setSize(0.175F, 0.175F);
+		this.setSize(0.15F, 0.15F);
 	}
 }

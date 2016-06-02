@@ -1,5 +1,7 @@
 package com.sorash.mosquitoes.entity;
 
+import com.sorash.mosquitoes.main.Resources;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -10,11 +12,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderMosquito extends RenderLiving<EntityMosquito>
 {
-	private static final ResourceLocation mosquitoTextures = new ResourceLocation("textures/entity/mosquito.png");
+	private static final ResourceLocation mosquitoTextures = new ResourceLocation(Resources.MODID + ":textures/entity/ModelMosquito.png");
 
 	public RenderMosquito(RenderManager renderManagerIn)
 	{
-		super(renderManagerIn, new ModelMosquito(), 0.15F);
+		super(renderManagerIn, new ModelMosquito(), 0.1F);	// shadow size 0.1F, keep the same as scale down value
 	}
 
 	/**
@@ -31,14 +33,15 @@ public class RenderMosquito extends RenderLiving<EntityMosquito>
 	 */
 	protected void preRenderCallback(EntityMosquito entitylivingbaseIn, float partialTickTime)
 	{
-		GlStateManager.scale(0.15F, 0.15F, 0.15F);	// scale model down
-													// 0.15F, 0.15F, 0.15F seems good
+		GlStateManager.scale(0.1F, 0.1F, 0.1F);	// scale model down
+												// 0.1F, 0.1F, 0.1F seems good
+												// keep shadow size the same
 		GlStateManager.translate(0.0F, -1.0F, 0.0F);	// needed or it falls through the floor??
 	}
 
-	protected void rotateCorpse(EntityMosquito mosquito, float p_77043_2_, float p_77043_3_, float partialTicks)
+	protected void rotateCorpse(EntityMosquito mosquito, float f1, float f2, float partialTicks)
 	{
 		GlStateManager.translate(0.0F, -0.1F, 0.0F);
-		super.rotateCorpse(mosquito, p_77043_2_, p_77043_3_, partialTicks);
+		super.rotateCorpse(mosquito, f1, f2, partialTicks);
 	}
 }
