@@ -3,6 +3,7 @@ package com.sorash.mosquitoes.entity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 public class ModelMosquito extends ModelBase
 {
@@ -131,26 +132,26 @@ public class ModelMosquito extends ModelBase
 		setRotation(leg6part2, 0F, 0F, -0.7853982F);
 	}
 
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float scale)
 	{
-		super.render(entity, f, f1, f2, f3, f4, f5);
-		setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-		head.render(f5);
-		body1.render(f5);
-		body2.render(f5);
-		sting.render(f5);
-		leg1part1.render(f5);
-		leg1part2.render(f5);
-		leg2part1.render(f5);
-		leg2part2.render(f5);
-		leg3part1.render(f5);
-		leg3part2.render(f5);
-		leg4part1.render(f5);
-		leg4part2.render(f5);
-		leg5part1.render(f5);
-		leg5part2.render(f5);
-		leg6part1.render(f5);
-		leg6part2.render(f5);
+		super.render(entity, f, f1, f2, f3, f4, scale);
+		setRotationAngles(f, f1, f2, f3, f4, scale, entity);
+		head.render(scale);
+		body1.render(scale);
+		body2.render(scale);
+		sting.render(scale);
+		leg1part1.render(scale);
+		leg1part2.render(scale);
+		leg2part1.render(scale);
+		leg2part2.render(scale);
+		leg3part1.render(scale);
+		leg3part2.render(scale);
+		leg4part1.render(scale);
+		leg4part2.render(scale);
+		leg5part1.render(scale);
+		leg5part2.render(scale);
+		leg6part1.render(scale);
+		leg6part2.render(scale);
 	}
 
 	private void setRotation(ModelRenderer model, float x, float y, float z)
@@ -160,8 +161,8 @@ public class ModelMosquito extends ModelBase
 		model.rotateAngleZ = z;
 	}
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
+	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity entity)
 	{
-		super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+		super.setRotationAngles(par1, par2, par3, par4, par5, par6, entity);
 	}
 }

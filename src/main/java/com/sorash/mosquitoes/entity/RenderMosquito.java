@@ -33,7 +33,7 @@ public class RenderMosquito extends RenderLiving<EntityMosquito>
 	 */
 	protected void preRenderCallback(EntityMosquito entitylivingbaseIn, float partialTickTime)
 	{
-		GlStateManager.scale(0.1F, 0.1F, 0.1F);	// scale model down
+		GlStateManager.scale(0.5F, 0.5F, 0.5F);	// scale model down
 												// 0.1F, 0.1F, 0.1F seems good
 												// keep shadow size the same
 		GlStateManager.translate(0.0F, -1.0F, 0.0F);	// needed or it falls through the floor??
