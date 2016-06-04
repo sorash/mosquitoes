@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderMosquito extends RenderLiving<EntityMosquito>
 {
-	private static final ResourceLocation mosquitoTextures = new ResourceLocation(Resources.MODID + ":textures/entity/ModelMosquito.png");
+	private static final ResourceLocation mosquitoTextures = new ResourceLocation(Resources.MODID + ":textures/entity/mosquito.png");
 
 	public RenderMosquito(RenderManager renderManagerIn)
 	{
